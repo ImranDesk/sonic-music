@@ -1,0 +1,13 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@import url("./_song.scss");
+@import url("./_player.scss");
+
+h1,
+h2,
+h3 {
+  color: rgb(88, 88, 88);
+}
