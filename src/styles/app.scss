@@ -1,11 +1,13 @@
+@import url("./_song.scss");
+@import url("./_player.scss");
+@import url("./_library.scss");
+@import url("./_nav.scss");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-@import url("./_song.scss");
-@import url("./_player.scss");
-@import url("./_library.scss");
 
 h1,
 h2,

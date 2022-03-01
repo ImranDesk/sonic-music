@@ -6,9 +6,13 @@
   height: 100%;
   box-shadow: 2px 2px 50px rgba(128, 128, 128, 0.589);
   overflow: scroll;
+  background-color: white;
   h2 {
     padding: 1rem 2rem;
   }
+  transform: translateX(-100%);
+  transition:all 0.5s ease;
+  opacity:0;
 }
 
 .library-song {
@@ -50,4 +54,10 @@
   background-color: aqua;
   border: none;
   border-radius: 20px;
+}
+
+
+.active-library{
+  transform: translateX(0%);
+  opacity: 1;
 }

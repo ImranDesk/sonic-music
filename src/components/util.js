@@ -1,5 +1,5 @@
 import { v4 } from "uuid";
-function ChillHop() {
+const ChillHop = () => {
   return [
     {
       name: "Soulsounds",
@@ -67,6 +67,6 @@ function ChillHop() {
       active: false,
     },
   ];
-}
+};
 
 export default ChillHop;

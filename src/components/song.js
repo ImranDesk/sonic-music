@@ -1,6 +1,6 @@
 import React from "react";
 
-function Song({ currentSong }) {
+const Song = ({ currentSong }) => {
   return (
     <div>
       <div className="song-container">
@@ -10,6 +10,6 @@ function Song({ currentSong }) {
       </div>
     </div>
   );
-}
+};
 
 export default Song;
