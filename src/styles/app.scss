@@ -5,9 +5,21 @@
 }
 @import url("./_song.scss");
 @import url("./_player.scss");
+@import url("./_library.scss");
 
 h1,
 h2,
 h3 {
   color: rgb(88, 88, 88);
+}
+.App {
+  padding-top: 2rem;
+}
+body {
+  font-family: "Lato", sans-serif;
+}
+h3,
+h4 {
+  font-weight: 400;
+  color: rgb(63, 63, 63);
 }
