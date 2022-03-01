@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faPause,
@@ -6,9 +6,14 @@ import {
   faAngleLeft,
   faAngleRight,
 } from "@fortawesome/free-solid-svg-icons";
-const Player = ({ isPlaying, setIsPlaying, currentSong }) => {
-  //ref
-  const audioRef = useRef(null);
+const Player = ({
+  audioRef,
+  isPlaying,
+  setIsPlaying,
+  currentSong,
+  setSongInfo,
+  songInfo,
+}) => {
   //event handlers
 
   const playSongHandler = () => {
@@ -21,11 +26,6 @@ const Player = ({ isPlaying, setIsPlaying, currentSong }) => {
       setIsPlaying(!isPlaying);
     }
   };
-  const timeUpdateHandler = (e) => {
-    const current = e.target.currentTime;
-    const duration = e.target.duration;
-    setSongInfo({ ...songInfo, currentTime: current, duration: duration });
-  };
 
   const getTime = (time) => {
     return (
@@ -37,11 +37,7 @@ const Player = ({ isPlaying, setIsPlaying, currentSong }) => {
     audioRef.current.currentTime = e.target.value;
     setSongInfo({ ...songInfo, currentTime: e.target.value });
   };
-  //state
-  const [songInfo, setSongInfo] = useState({
-    currentTime: 0,
-    duration: 0,
-  });
+
   return (
     <div className="player">
       <div className="time-control">
@@ -61,7 +57,7 @@ const Player = ({ isPlaying, setIsPlaying, currentSong }) => {
           size="2x"
           onClick={playSongHandler}
           className="play"
-          icon={( isPlaying ? faPause : faPlay)} //if isPlaying = true, set icon to faPause, else set to faPlay
+          icon={isPlaying ? faPause : faPlay} //if isPlaying = true, set icon to faPause, else set to faPlay
         />
         <FontAwesomeIcon
           size="2x"
@@ -69,12 +65,6 @@ const Player = ({ isPlaying, setIsPlaying, currentSong }) => {
           icon={faAngleRight}
         />
       </div>
-      <audio
-        onLoadedMetadata={timeUpdateHandler}
-        onTimeUpdate={timeUpdateHandler}
-        ref={audioRef}
-        src={currentSong.audio}
-      ></audio>
     </div>
   );
 };
