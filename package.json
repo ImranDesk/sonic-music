@@ -1,4 +1,5 @@
-{
+{ 
+  "homepage": "https://imrandesk.github.io/music-player/" 
   "name": "music-player",
   "version": "0.1.0",
   "private": true,
