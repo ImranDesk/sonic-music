@@ -49,7 +49,7 @@ const Player = ({
 
     if (direction === "skip-back") {
       if ((currentIndex - 1) % songs.length === -1) {
-        // await setCurrentSong(songs.length);
+        await setCurrentSong(songs[songs.length - 1]);
         // playAudio(isPlaying, audioRef)
         if (isPlaying) audioRef.current.play();
         return;
@@ -67,7 +67,7 @@ const Player = ({
         <input
           onChange={dragHandler}
           min={0}
-          max={songInfo.duration }
+          max={songInfo.duration}
           value={songInfo.currentTime}
           type="range"
         />
