@@ -64,7 +64,8 @@ const Player = ({
     <div className="player">
       <div className="time-control">
         <p>{getTime(songInfo.currentTime)}</p>
-        <input
+        <input 
+        className="slider"
           onChange={dragHandler}
           min={0}
           max={songInfo.duration}
