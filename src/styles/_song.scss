@@ -7,6 +7,9 @@
   img {
     width: 20%;
     border-radius: 50%;
+    border:2px solid aqua;
+    box-shadow: 0px 0px 5px aqua;
+    
   }
 
   h2 {
@@ -22,7 +25,7 @@
 @media screen and(max-width: 768px){
   .song-container{
     img{
-      width: 60%;
+      width: 50%;
     }
   }
 }

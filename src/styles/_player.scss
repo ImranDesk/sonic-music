@@ -25,6 +25,9 @@
   width: 30%;
   svg {
     cursor: pointer;
+    &:active{
+      color:aqua;
+    }
   }
 }
 
