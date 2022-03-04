@@ -6,17 +6,16 @@
   height: 100%;
   box-shadow: 2px 2px 50px rgba(128, 128, 128, 0.589);
   overflow: scroll;
-  background:white;
- 
+  background: white;
+
   // backdrop-filter: blur(2rem);
-  
- 
+
   h2 {
     padding: 1rem 2rem;
   }
   transform: translateX(-100%);
-  transition:all 0.5s ease;
-  opacity:0;
+  transition: all 0.5s ease;
+  opacity: 0;
 }
 
 .library-song {
@@ -27,8 +26,6 @@
   padding: 1rem 2rem;
   img {
     width: 30%;
-    
-    
   }
   &:hover {
     background-color: rgb(178, 250, 250);
@@ -63,23 +60,21 @@
   border-radius: 20px;
 }
 
-
-.active-library{
+.active-library {
   transform: translateX(0%);
   opacity: 1;
 }
-@media screen and(max-width: 768px){
-  .library{
+@media screen and(max-width: 768px) {
+  .library {
     width: 100%;
   }
-  img{
+  img {
     transition: all 0.5s ease;
   }
 }
 
-@media screen and(min-width: 768px){
-
-  img{
+@media screen and(min-width: 768px) {
+  img {
     transition: all 0.5s ease;
   }
 }
